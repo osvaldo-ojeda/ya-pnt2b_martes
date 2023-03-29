@@ -204,7 +204,7 @@ El siguiente código itera sobre un array de números, aplicándoles la raíz cu
      // raices tiene [1, 2, 3]
      // numeros aún mantiene [1, 4, 9]
 
-Usando map para dar un nuevo formato a los objetos de un array
+## Usando map para dar un nuevo formato a los objetos de un array
 El siguiente código toma un array de objetos y crea un nuevo array que contiene los nuevos objetos formateados.
 
      const kvArray = [{clave:1, valor:10},
@@ -245,3 +245,29 @@ El siguiente código muestra cómo trabaja map cuando se utiliza una función qu
 
      // dobles es ahora [2, 8, 18]
      // numeros sigue siendo [1, 4, 9]
+
+------
+## ejemplo con el argumento this
+Supongamos que tenemos un objeto person con una propiedad name y un método getFullName() que devuelve el nombre completo de la persona:
+
+     const person = {
+     name: 'John',
+     getFullName() {
+     return `My name is ${this.name}`;
+     }
+     };
+Ahora, supongamos que tenemos un array people que contiene varios objetos person. Queremos utilizar el método map() para obtener un nuevo array que contenga los nombres completos de todas las personas en el array original. Podemos hacerlo de la siguiente manera:
+
+     const people = [
+     { name: 'John' },
+     { name: 'Jane' },
+     { name: 'Bob' }
+     ];
+
+     const fullNames = people.map(function(person) {
+     return this.getFullName();
+     }, person);
+
+     console.log(fullNames); // ["My name is John", "My name is Jane", "My name is Bob"]
+     
+En este ejemplo, pasamos el objeto person como el valor de thisArg al método map(). Luego, en la función de devolución de llamada que pasamos a map(), podemos utilizar this para hacer referencia al objeto person y llamar a su método getFullName(). Como resultado, el nuevo array fullNames contiene los nombres completos de todas las personas en el array original.

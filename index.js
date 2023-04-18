@@ -1,5 +1,7 @@
-const bienvenida= require("./functions/bienvenida")
+const bienvenida = require("./functions/bienvenida");
 
+const cosas = require("./utils/cosas");
+const reducir= require("./functions/reducir")
 
 const nombres = ["Matias", "Paola", "Luz", "Osvaldito", { apodos: ["Matu"] }];
 //esto no es una copiaaaaaa
@@ -58,24 +60,24 @@ copiaJSONParse[4].apodos[0] = "Matute";
 
 const copiaStructuredClone = structuredClone(nombres);
 
-console.log(
-  "🚀 ------------------------------------------------------------🚀"
-);
-console.log("🚀 nombres:", nombres);
-console.log("🚀 copiaNombresAmano:", copiaNombresAmano);
-console.log("🚀 copiaFor:", copiaFor(nombres));
-console.log("🚀 copiaForEach:", copiaForEach(nombres));
-console.log("🚀 copiaMap:", copiaMap(nombres));
-console.log("🚀 copiaSlice:", copiaSlice);
-console.log("🚀 copiaSpread:", copiaSpread);
-console.log("🚀 copiaSpread4:", (copiaSpread[4].apodos[0] = ""));
-console.log("🚀 copiaObjetAssign:", copiaObjetAssign);
-console.log("🚀 copiaJSON:", copiaJSON[2]);
-console.log("🚀 copiaJSONParse:", copiaJSONParse);
-console.log("🚀 copiaStructuredClone:", copiaStructuredClone);
-console.log(
-  "🚀 ------------------------------------------------------------🚀"
-);
+// console.log(
+//   "🚀 ------------------------------------------------------------🚀"
+// );
+// console.log("🚀 nombres:", nombres);
+// console.log("🚀 copiaNombresAmano:", copiaNombresAmano);
+// console.log("🚀 copiaFor:", copiaFor(nombres));
+// console.log("🚀 copiaForEach:", copiaForEach(nombres));
+// console.log("🚀 copiaMap:", copiaMap(nombres));
+// console.log("🚀 copiaSlice:", copiaSlice);
+// console.log("🚀 copiaSpread:", copiaSpread);
+// console.log("🚀 copiaSpread4:", (copiaSpread[4].apodos[0] = ""));
+// console.log("🚀 copiaObjetAssign:", copiaObjetAssign);
+// console.log("🚀 copiaJSON:", copiaJSON[2]);
+// console.log("🚀 copiaJSONParse:", copiaJSONParse);
+// console.log("🚀 copiaStructuredClone:", copiaStructuredClone);
+// console.log(
+//   "🚀 ------------------------------------------------------------🚀"
+// );
 // ejercicio
 // const numeros = [1, 2, 3, 4, 5];
 // for (let index = numeros.length; index > 0; index--) {
@@ -83,38 +85,39 @@ console.log(
 // }
 
 const numeros = [1, 2, 3, 4, 5];
- numeros.splice(0);
+numeros.splice(0);
 // numeros.length=0
 
+// console.log("🚀 -----------------------------------------🚀");
+// console.log("🚀  numeros:", numeros);
+// console.log("🚀  numeros:", numeros[0]);
+// console.log("🚀 -----------------------------------------🚀");
 
-console.log("🚀 -----------------------------------------🚀");
-console.log("🚀  numeros:", numeros);
-console.log("🚀  numeros:", numeros[0]);
-console.log("🚀 -----------------------------------------🚀");
-
-bienvenida()
+// bienvenida()
 
 // Reducir Ejercicio: resumir las instancias de cada uno de estos elementos en un solo objeto
 // Ejemplo:
 // const mascotas = ['perro', 'gato', 'perro'];
 // Resultado: { 'perro': 2, 'gato': 1 }
 
-const cosas = [
-    "pelota",
-    "pelota",
-    "auto",
-    "silla",
-    "auto",
-    "kuka",
-    "compu",
-    "kuka",
-    "kuka",
-    "compu",
-    "pelota",
-    "moto",
-    "avion",
-    "avion",
-    "planta",
-    "planta",
-    "planta",
-  ];
+
+
+const data = {
+  nombre: "osvaldo",
+};
+
+console.log(reducir(cosas));
+
+// let edad="edad"
+// data.apellido="ojeda"
+// data[edad]=36
+// console.log(data.nombre)
+// console.log(data.apellido)
+// console.log(data.edad)
+// console.log(data)
+
+// tabla de verdar or ó ||
+// v||v=v
+// f||v=v
+// v||f=v
+// f||f=f

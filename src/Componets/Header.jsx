@@ -1,9 +1,11 @@
-import React from 'react'
+
+import Nav from './Nav'
 
 const Header = () => {
   return (
     <header>
-      soy un header
+      <h1>Soy el header</h1>
+      <Nav/>
     </header>
   )
 }

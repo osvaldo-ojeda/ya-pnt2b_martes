@@ -1,11 +1,11 @@
-import React from 'react'
-
+import Nav from "./Nav";
 const Footer = () => {
   return (
     <footer>
-      soy un footer
+      <h2>soy un footer</h2>
+      <Nav/>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

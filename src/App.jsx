@@ -1,32 +1,42 @@
-import Header from "./Components/Header";
-import Main from "./Components/Main";
-import Footer from "./Components/Footer";
-import Aside from "./Components/Aside";
-import Div from "./Components/Div";
+import { useState } from "react";
+import CountContainer from "./components/CountContainer";
 
-let color = {
-  backgroundColor: "tomato",
-};
+const App = () => {
+  // const num = [0, 1, 2];
+  // const [cero, uno, dos] = num;
+  // console.log("🚀 ---------------------------------------🚀")
+  // console.log("🚀 ~ ", cero)
+  // console.log("🚀 ~", uno)
+  // console.log("🚀 ~ ", dos)
+  // console.log("🚀 ---------------------------------------🚀")
 
-function App() {
+  // const count=useState("")
+  // console.log("🚀 -----------------------------------------🚀")
+  // console.log("🚀 ~ file: App.jsx:6 ~ App ~ count:", count)
+  // console.log("🚀 -----------------------------------------🚀")
+
+  // const [nombreEstado, setNombreEstado]=useState("initial state")
+  // const [count, setCount] = useState(0);
+  // let count=0
+  // const add = () => {
+  //   setCount(count+1)
+  //   console.log(count)
+  // };
+
+//  let contador=1
+//  contador++
+//  contador+=1
+//  contador=contador+1
+//  contador+1
+
+
+
   return (
-    <>
-      {/* <Header ></Header> */}
-      <Header />
-      {/* <img src="" alt="" /> */}
-      <h1>Soy el h1</h1>
-      {/* <h1 style={color}>Hola</h1>
-      <h2 style={{ backgroundColor: "blue" }}>Hola</h2>
-      <h3 className="titulo">Hola</h3> */}
-      <Main/>
-      <Main aside={Aside}>
-        {/* <h1>Soy un children</h1>
-        <Div /> */}
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, consequatur, doloribus molestias quos incidunt modi quae nisi labore sequi aspernatur tenetur ipsam, perspiciatis autem minima eveniet qui alias nulla? Illo!</p>
-      </Main>
-      <Footer />
-    </>
+    <div>
+      {/* <button onClick={add}>add</button>
+      <h1>{count}</h1> */}
+      <CountContainer/>
+    </div>
   );
-}
-
+};
 export default App;

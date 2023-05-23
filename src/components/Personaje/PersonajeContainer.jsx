@@ -1,13 +1,9 @@
 import { useEffect, useState } from "react";
+import PersonajeDetail from "./PersonajeDetail";
+
 const PersonajeContainer = () => {
   const [personaje, setPersonaje] = useState({});
   useEffect(() => {
-    // (async () => {
-    //   const response = await fetch(
-    //     "https://rickandmortyapi.com/api/character/4"
-    //   );
-    //   console.log("response", response);
-    // })();
     const fetchData = async () => {
       const response = await fetch(
         "https://rickandmortyapi.com/api/character/4"
@@ -17,8 +13,6 @@ const PersonajeContainer = () => {
     };
     fetchData();
   }, []);
-  console.log("perfsonaje", personaje);
-
-  return <div>PersonajeContainer</div>;
+  return <PersonajeDetail personaje={personaje}/>;
 };
 export default PersonajeContainer;

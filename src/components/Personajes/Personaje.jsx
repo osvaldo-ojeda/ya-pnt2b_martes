@@ -1,5 +1,5 @@
 const Personaje = ({personaje}) => {
-   console.log(personaje)
+  
   return (
     <div>
         <h1>{personaje.name}</h1>

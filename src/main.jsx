@@ -16,7 +16,7 @@ const router = createBrowserRouter([
         element:<PersonajesContainer/>
       },
       {
-        path:"/detail",
+        path:"/detail/:id",
         element:<PersonajeContainer/>
       }
     ]

@@ -4,6 +4,7 @@ import Home from "../components/Home";
 import PersonajesContainer from "../components/Personajes/PersonajesContainer";
 import PersonajeContainer from "../components/Personaje/PersonajeContainer";
 import Login from "../components/Login/Login";
+import Register from "../components/Register/Register";
 
 const router = createBrowserRouter([
   {
@@ -30,7 +31,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/register",
-    element: <h2>Aca iria el registro</h2>,
+    element: <Register/>,
   },
 ]);
 

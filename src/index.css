@@ -9,28 +9,47 @@ body {
   color: deeppink;
 }
 
-
-body, #root{
+body,
+#root {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
-header{
+header {
   height: 10vh;
   background-color: red;
 }
-main{
+nav > a {
+  display: none;
+}
+main {
   flex-grow: 1;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
-.personajesContainer{
+.personajesContainer {
   width: 300px;
   height: 350px;
 }
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
 
-footer{
+footer {
   height: 5vh;
   background-color: aquamarine;
+}
+
+@media only screen and (min-width: 600px) {
+  nav > a {
+    display: inline;
+  }
 }

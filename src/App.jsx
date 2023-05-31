@@ -5,7 +5,7 @@ const App = () => {
   return (
     <>
       {/* llevar el router de main.jsx a un nuevo archivo */}
-      {/* hacer nav con home, personajes, login, sing */}
+      {/* hacer nav con home, personajes, login, sign-in */}
       {/* hacer boton en PersonajeDetail que redirija a /personajes */}
 
       <Header />

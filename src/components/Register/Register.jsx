@@ -2,28 +2,29 @@ import { useState } from "react";
 import Back from "../Back/Back";
 
 const Register = () => {
-  const [nombre, setNombre] = useState("");
-  const [apellido, setApellido] = useState("");
+  const [data, setData] = useState({
+    // nombre: "",
+    // apellido: "",
+    // edad: "",
+    // password: "",
+  });
 
-  const handleNombreInput = (e) => {
-    // console.log(e.target.value);
-    // console.dir(e.target);
-    setNombre(e.target.value);
-  };
-
-  const handleApellidoInput = (e) => {
-    setApellido(e.target.value);
+  const handleInput = (e) => {
+    const { name, value } = e.target;
+    const dataCopy = { ...data };
+    dataCopy[name] = value;
+    setData(dataCopy);
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const obj = {
-      nombre,
-      apellido,
-    };
-    console.log("🚀 obj:", obj);
-    setNombre("")
-    setApellido("")
+    console.log(data);
+    setData({
+      // nombre: "",
+      // apellido: "",
+      // edad: "",
+      // password: "",
+    });
   };
 
   return (
@@ -33,9 +34,9 @@ const Register = () => {
         <input
           type="text"
           name="nombre"
-          value={nombre}
+          value={data?.nombre||""}
           id="nombre"
-          onInput={handleNombreInput}
+          onInput={handleInput}
         />
 
         <label htmlFor="apellido">Apellido</label>
@@ -43,14 +44,27 @@ const Register = () => {
           type="text"
           name="apellido"
           id="apellido"
-          value={apellido}
-          onInput={handleApellidoInput}
+          value={data?.apellido||""}
+          onInput={handleInput}
         />
 
         <label htmlFor="edad">Edad</label>
-        <input type="number" name="edad" id="edad" />
+        <input
+          type="number"
+          name="edad"
+          id="edad"
+          value={data?.edad||""}
+          onInput={handleInput}
+          required
+        />
 
-        <input type="password" name="password" placeholder="Password" />
+        <input
+          type="password"
+          name="password"
+          placeholder="Password"
+          value={data?.password||""}
+          onInput={handleInput}
+        />
         <button>enviar</button>
       </form>
 

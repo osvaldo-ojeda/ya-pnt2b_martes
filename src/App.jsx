@@ -1,17 +1,14 @@
 import Header from "./components/Header";
 import Main from "./components/Main";
 import Footer from "./components/Footer";
+import ContadorProvider from "./context/ContadorProvider";
 const App = () => {
   return (
-    <>
-      {/* llevar el router de main.jsx a un nuevo archivo */}
-      {/* hacer nav con home, personajes, login, sign-in */}
-      {/* hacer boton en PersonajeDetail que redirija a /personajes */}
-
+    <ContadorProvider>
       <Header />
       <Main />
       <Footer />
-    </>
+    </ContadorProvider>
   );
 };
 export default App;

@@ -17,8 +17,15 @@ body,
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  height: 10vh;
+  padding: 10px;
   height: 10vh;
   background-color: red;
+}
+.count {
+  color: black;
 }
 nav > a {
   display: none;

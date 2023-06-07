@@ -5,11 +5,18 @@ export const contador = createContext({});
 const { Provider } = contador;
 
 const ContadorProvider = ({ children }) => {
-
-
-  const contador={
-    nombre:"KUKA"
-  }
+  const [count, setCount] = useState(0);
+  const remove = () => {
+    setCount(count - 1);
+  };
+  const add = () => {
+    setCount(count + 1);
+  };
+  const contador = {
+    count,
+    remove,
+    add,
+  };
   return <Provider value={contador}>{children} </Provider>;
 };
 

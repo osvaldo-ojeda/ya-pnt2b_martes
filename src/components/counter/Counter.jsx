@@ -1,8 +1,14 @@
-import { useContext } from "react";
-import { contador } from "../../context/ContadorProvider";
+// import { useContext } from "react";
+
+import useCounter from "../../customHooks/useCounter";
+
+// import { contador } from "../../context/ContadorProvider";
+
 
 const Counter = () => {
-  const { count, remove, add } = useContext(contador);
+  // const { count, remove, add } = useContext(contador);
+  const { count, remove, add } = useCounter();
+  console.log("🚀 ~ file: Counter.jsx:11 ~ Counter ~ count:", count)
   return (
     <div>
       <button onClick={remove}>-</button>

@@ -12,7 +12,7 @@ const PersonajeDetail = ({ personaje }) => {
       <h3>Location: {personaje?.location?.name}</h3>
       <img src={personaje.image} alt={personaje.name} />
       <Back url="personajes"/>
-      <Counter/>
+      {/* <Counter/> */}
     </div>
   );
 };
